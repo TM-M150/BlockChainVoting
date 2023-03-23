@@ -1,6 +1,19 @@
 //Set up mongoose connection
 const mongoose = require('mongoose');
-const mongoDB = 'mongodb://localhost/BlockVotes';
-mongoose.connect(mongoDB,{ useNewUrlParser: true });
-mongoose.Promise = global.Promise;
-module.exports = mongoose;
+
+const connectDB = async function () {
+  try {
+    mongoose.set("strictQuery", true);
+    const client = await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    console.log(`MongoDB Connected: ${client.connection.host}`);
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+};
+
+module.exports = connectDB;
