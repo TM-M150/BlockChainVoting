@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "BlockChain Based E-Voting System",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=develpment nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TM-M150/BlockChainVoting.git"
+  },
+  "keywords": [
+    "BlockChain",
+    "Vote",
+    "Voting"
+  ],
+  "author": "Tommy Maro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TM-M150/BlockChainVoting/issues"
+  },
+  "homepage": "https://github.com/TM-M150/BlockChainVoting#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  }
+}
