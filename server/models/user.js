@@ -2,6 +2,11 @@ import mongoose from "mongoose";
 
 const VoterSchema = new mongoose.Schema(
   {
+    Name: {
+      type: String,
+      require: true,
+    },
+
     Email: {
       type: String,
       require: true,
@@ -12,7 +17,12 @@ const VoterSchema = new mongoose.Schema(
       require: true,
     },
 
-    Election_Address: {
+    PublicKey: {
+      type: String,
+      require: true,
+    },
+
+    PrivateKey: {
       type: String,
       require: true,
     },
@@ -20,4 +30,4 @@ const VoterSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("VoterList", VoterSchema);
+export default mongoose.model("User", VoterSchema);

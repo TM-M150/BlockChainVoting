@@ -1,0 +1,22 @@
+User Information
+- User ID (unique identifier)
+- Name
+- Email
+- Password (hashed for security)
+- Public key (for vote encryption)
+- Private key (for vote decryption)
+
+Candidate Information
+- Candidate ID (unique identifier)
+- Name
+- Party Affiliation
+- Biography
+- Image or Video
+
+Vote Information
+- Vote ID (unique identifier)
+- Voter ID
+- Election ID (if there are multiple elections being held)
+- Timestamp (when vote was cat)
+- Encrypted vote (using the voter's public key)
+- Hash of the previous block (to link the current block to the previous one)
