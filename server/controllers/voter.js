@@ -6,7 +6,7 @@ export const create = async function (req, res, next) {
   try {
     const voter = await VoterList.findOne({ Email: req.body.Email });
     if (voter) return next(createError(403, "Already Exists!"));
-
+0
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.Password, salt);
 
